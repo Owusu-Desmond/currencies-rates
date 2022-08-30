@@ -1,5 +1,5 @@
 {
-  "name": "metrics-webapp",
+  "name": "currencies-rates",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
