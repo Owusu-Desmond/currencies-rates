@@ -6,7 +6,7 @@ Currencies-rates is an app that shows all currencies, their corresponding code a
 
 ## Screenshot
 
-Not avialable noe
+[Screencast of currency rates app](https://user-images.githubusercontent.com/92303891/188040615-27a07db6-5f70-47cc-be1c-5c536ab7974a.webm)
 
 ## Build With
 
@@ -103,9 +103,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
+
+
 
 ## 📝 License
 
