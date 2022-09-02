@@ -8,7 +8,6 @@ export const fetchAllCurrencies = createAsyncThunk(FETCH_CURRENCIES_ALL, async (
   const data = await response.json();
   return data;
 });
-
 export default function currenciesReducer(state = {}, action) {
   switch (action.type) {
     case `${FETCH_CURRENCIES_ALL}/fulfilled`:
