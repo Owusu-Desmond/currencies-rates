@@ -12,3 +12,16 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+footer {
+  background-color: #9b2552;
+  padding: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+}
