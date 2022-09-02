@@ -30,10 +30,10 @@ const Currency = ({ currency }) => {
 
   useEffect(() => {
     // fetch the latest currency exchange rates for the currency code
-    const date = dateNow;
+    const date = '2022-09-03';
     dispatch(fetchCurrencyByCodeLatestInSpecificDate({ date, code }));
     // check if the latest currency exchange rates is empty
-    if (!currencyExchangeRates) {
+    if (Object.keys(currencyExchangeRatesObject).length === 0) {
       dispatch(fetchCurrencyByCodeLatest(code));
     }
   }, []);
