@@ -57,7 +57,6 @@ const Homepage = () => {
               {/* eslint-disable-previous-line jsx-a11y/click-events-have-key-events */}
               <span className="forward-icon">
                 <BsArrowRightCircle />
-                getAllByTestIdgetAllByTestId
               </span>
               {
               // get the currency symbol from the currency code
