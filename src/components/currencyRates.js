@@ -1,25 +1,53 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { IoIosArrowBack } from 'react-icons/io';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import getSymbolFromCurrency from 'currency-symbol-map';
-import { fetchCurrencyByCodeLatest, fetchCurrencyByCodeLatestInSpecificDate } from '../store/currencies/currencyByCode';
+import {
+  fetchCurrencyByCodeLatest,
+  fetchCurrencyByCodeLatestInSpecificDate,
+  displayAllRates, displaySingleRate,
+} from '../store/currencies/currencyByCode';
 import Nav from './nav';
 
 const Currency = ({ currency }) => {
   const { code, name } = currency;
-  const currencyExchangeRatesByCurrencies = useSelector((state) => state.currencyRateByCode);
+  const exchangeRates = useSelector((state) => state.currencyRateByCode);
   const dispatch = useDispatch();
 
   // restructure the object data to be an array of objects
-  const currencyDate = currencyExchangeRatesByCurrencies.date;
-  const currencyExchangeRatesObject = currencyExchangeRatesByCurrencies[code] || {};
-  const currencyExchangeRates = Object.keys(currencyExchangeRatesObject).map((key) => ({
+  const currencyDate = exchangeRates[0].date;
+  const exchangeRatesObj = exchangeRates[0][code] || {};
+  const exchangeRateObj = exchangeRates[1] || {};
+
+  // all the exchange rates for the currency
+  const currencyExchangeRates = Object.keys(exchangeRatesObj).map((key) => ({
     code: key,
-    rate: currencyExchangeRatesByCurrencies[code][key],
+    rate: exchangeRates[0][code][key],
   }));
+
+  // single exchange rate for the currency
+  const currencyExchangeRate = Object.keys(exchangeRateObj).map((key) => ({
+    code: key,
+    rate: exchangeRateObj[key],
+  }));
+
+  // function to display the exchange rates
+  const dataToDisplayFunc = () => (
+    (currencyExchangeRate.length !== 0) ? currencyExchangeRate : currencyExchangeRates
+  );
+  const dataToDisplay = dataToDisplayFunc();
+
+  const showPreferedCurrencyRate = (e) => {
+    const rateCode = e.target.value;
+    if (rateCode === 'ALL') {
+      dispatch(displayAllRates(code)); // display all the exchange rates for the currency
+    } else {
+      dispatch(displaySingleRate({ code, rateCode }));
+    }
+    // remove focus from the select element
+    e.target.blur();
+  };
 
   const handleDateChange = (e) => {
     const date = e.target.value;
@@ -33,7 +61,7 @@ const Currency = ({ currency }) => {
     const date = '2022-09-03';
     dispatch(fetchCurrencyByCodeLatestInSpecificDate({ date, code }));
     // check if the latest currency exchange rates is empty
-    if (Object.keys(currencyExchangeRatesObject).length === 0) {
+    if (Object.keys(exchangeRatesObj).length === 0) {
       dispatch(fetchCurrencyByCodeLatest(code));
     }
   }, []);
@@ -47,9 +75,15 @@ const Currency = ({ currency }) => {
           ${(currencyDate === dateNow) ? '(latest)' : ''}`
           }
         >
-          <Link to="/">
-            <IoIosArrowBack />
-          </Link>
+          <select onChange={showPreferedCurrencyRate}>
+            {/* default options to be all currencies */}
+            <option value="ALL">All RATES</option>
+            {currencyExchangeRates.map((currency) => (
+              <option key={currency.code} value={currency.code}>
+                {currency.code}
+              </option>
+            ))}
+          </select>
         </Nav>
         <div className="currency-search-container">
           <input type="date" value={currencyDate} min="2020-01-01" onChange={handleDateChange} max={dateNow} />
@@ -83,18 +117,25 @@ const Currency = ({ currency }) => {
           {currencyDate}
         </p>
       </header>
-      <section className="currency-container">
-        <div className="currency-body">
-          {currencyExchangeRates.map((cur) => (
-            <div className="currency-exchange-rate" key={cur.code}>
-              <div>{cur.code.toUpperCase()}</div>
-              <div className="rate-arrow-container">
-                <div>{cur.rate.toFixed(3)}</div>
-                <div><BsArrowRightCircle /></div>
-              </div>
+      <section
+        className={
+        `${(currencyExchangeRate.length) === 1 ? 'currency-exchange-rate-section' : ''}`
+      }
+      >
+        {dataToDisplay.map((cur) => (
+          <div
+            className={
+              `${(currencyExchangeRate.length) === 1 ? 'currency-exchange-rate-single' : 'currency-exchange-rate'}`
+            }
+            key={cur.code}
+          >
+            <div>{cur.code.toUpperCase()}</div>
+            <div className="rate-arrow-container">
+              <div>{cur.rate.toFixed(3)}</div>
+              <div><BsArrowRightCircle /></div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </section>
     </>
 

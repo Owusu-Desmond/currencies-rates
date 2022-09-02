@@ -7,7 +7,7 @@
 
 .all-currencies-nav {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   background-color: #b13967;
   color: #fff;
   width: 96%;
@@ -35,6 +35,21 @@ nav > div a {
   font-size: 20px;
   text-align: center;
   font-weight: 500;
+}
+
+nav select {
+  width: 90%;
+  border-radius: 5px;
+  background-color: #b13967;
+  border: 2px solid #fff;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+nav select:focus {
+  outline: none;
+  border: 3px solid #fff;
 }
 
 .search-setting-icon {
@@ -80,12 +95,27 @@ header > p {
   font-size: 18px;
 }
 
-.all-currencies-body {
+.all-currencies-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.all-currencies-body button {
+.single-currency-container {
+  background-color: var(--primary-color-light);
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.single-currency-container button {
+  background-color: var(--primary-color);
+  width: 70%;
+  border-radius: 15px;
+  border: none;
+  margin: auto;
+}
+
+.all-currencies-container button {
   padding: 0;
   border: none;
 }
@@ -128,23 +158,23 @@ header > p {
   margin: auto;
 }
 
-.all-currencies-body button:nth-of-type(odd) {
+.all-currencies-container button:nth-of-type(odd) {
   background-color: var(--primary-color-light);
 }
 
-.all-currencies-body button:nth-of-type(odd) .currency-symbol {
+.all-currencies-container button:nth-of-type(odd) .currency-symbol {
   border: 10px solid var(--primary-color);
 }
 
-.all-currencies-body button:nth-of-type(even) {
+.all-currencies-container button:nth-of-type(even) {
   background-color: var(--primary-color);
 }
 
-.all-currencies-body button:nth-of-type(even) .currency-symbol {
+.all-currencies-container button:nth-of-type(even) .currency-symbol {
   border: 10px solid var(--primary-color-light);
 }
 
-.all-currencies-body button:nth-of-type(3n-1) {
+.all-currencies-container button:nth-of-type(3n-1) {
   grid-column-start: 1;
   grid-row-start: 1;
 }
@@ -182,6 +212,32 @@ header > p {
   grid-gap: 10px;
   color: white;
   font-size: 25px;
+}
+
+.currency-exchange-rate-section {
+  background-color: var(--primary-color);
+  width: 60%;
+  padding: 20px 20%;
+}
+
+.currency-exchange-rate-single {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 94%;
+  padding: 20px 3%;
+  color: #fff;
+  font-size: 25px;
+  background-color: var(--primary-color-light);
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.currency-exchange-rate-single > div:first-child {
+  padding: 10px;
+  background-color: var(--primary-color);
+  font-size: 40px;
 }
 
 .currency-exchange-rate:nth-of-type(odd) {

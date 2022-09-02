@@ -5,16 +5,16 @@ import { fetchAllCurrencies } from './store/currencies/allCurrencies';
 import Homepage from './components/homepage';
 import Currency from './components/currencyRates';
 import './styles/App.css';
+import Footer from './components/footer';
 
 function App() {
   const currencies = useSelector((state) => state.currencies);
   const dispatch = useDispatch();
   // restructure the object data to be an array of objects
-  const currenciesArray = Object.keys(currencies).map((key) => ({
+  const currenciesArray = Object.keys(currencies[0]).map((key) => ({
     code: key,
-    name: currencies[key],
+    name: currencies[0][key],
   }));
-
   useEffect(() => {
     if (currenciesArray.length === 0) {
       dispatch(fetchAllCurrencies());
@@ -32,7 +32,7 @@ function App() {
             <Route key={currency.code} path={`/currency/${currency.code}`} element={<Currency currency={currency} />} />
           ))}
         </Routes>
-
+        <Footer />
       </div>
     </BrowserRouter>
   );
