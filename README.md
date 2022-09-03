@@ -6,7 +6,7 @@ Currencies-rates is an app that shows all currencies, their corresponding code a
 
 ## Screenshot
 
-Not avialable noe
+https://user-images.githubusercontent.com/92303891/188251785-9670063b-ab6c-4fd0-9876-85370ba50b06.mp4
 
 ## Build With
 
@@ -24,7 +24,7 @@ Not avialable noe
 ## Live Demo Link
 
 Access the the online version of my application with this link
-[Live Demo](https://currencies-rates.netlify.app/)
+[Live Demo](https://currencies-exchange-rates.netlify.app/)
 
 
 ## Getting Started
@@ -103,9 +103,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
+
+
 
 ## 📝 License
 

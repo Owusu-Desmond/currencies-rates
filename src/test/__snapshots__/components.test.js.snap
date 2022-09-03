@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage and currencyRate should render the currencyRate component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <header>
+        <nav
+          class="all-currencies-nav"
+        >
+          <div>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"
+              />
+            </svg>
+          </div>
+          <div
+            class="nav-text"
+          >
+            USD - undefined 
+          
+          </div>
+          <div
+            class="search-setting-icon"
+          >
+            <select>
+              <option
+                value="ALL"
+              >
+                All RATES
+              </option>
+            </select>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M413.967 276.8c1.06-6.235 1.06-13.518 1.06-20.8s-1.06-13.518-1.06-20.8l44.667-34.318c4.26-3.118 5.319-8.317 2.13-13.518L418.215 115.6c-2.129-4.164-8.507-6.235-12.767-4.164l-53.186 20.801c-10.638-8.318-23.394-15.601-36.16-20.801l-7.448-55.117c-1.06-4.154-5.319-8.318-10.638-8.318h-85.098c-5.318 0-9.577 4.164-10.637 8.318l-8.508 55.117c-12.767 5.2-24.464 12.482-36.171 20.801l-53.186-20.801c-5.319-2.071-10.638 0-12.767 4.164L49.1 187.365c-2.119 4.153-1.061 10.399 2.129 13.518L96.97 235.2c0 7.282-1.06 13.518-1.06 20.8s1.06 13.518 1.06 20.8l-44.668 34.318c-4.26 3.118-5.318 8.317-2.13 13.518L92.721 396.4c2.13 4.164 8.508 6.235 12.767 4.164l53.187-20.801c10.637 8.318 23.394 15.601 36.16 20.801l8.508 55.117c1.069 5.2 5.318 8.318 10.637 8.318h85.098c5.319 0 9.578-4.164 10.638-8.318l8.518-55.117c12.757-5.2 24.464-12.482 36.16-20.801l53.187 20.801c5.318 2.071 10.637 0 12.767-4.164l42.549-71.765c2.129-4.153 1.06-10.399-2.13-13.518l-46.8-34.317zm-158.499 52c-41.489 0-74.46-32.235-74.46-72.8s32.971-72.8 74.46-72.8 74.461 32.235 74.461 72.8-32.972 72.8-74.461 72.8z"
+              />
+            </svg>
+          </div>
+        </nav>
+        <div
+          class="currency-search-container"
+        >
+          <input
+            max="2022-09-02"
+            min="2020-01-01"
+            type="date"
+            value=""
+          />
+        </div>
+        <div
+          class="all-currencies-header"
+        >
+          <div
+            class="currency-icon"
+          >
+            <span>
+              $
+            </span>
+          </div>
+          <div
+            class="all-currency-text"
+          >
+            <p>
+              United States Dollar
+            </p>
+            <span>
+              0
+               
+              Exchange rates
+            </span>
+          </div>
+        </div>
+        <p>
+          Currency Name/Exchange Rates -
+        </p>
+      </header>
+      <section
+        class=""
+      />
+    </div>
+  </body>,
+  "container": <div>
+    <header>
+      <nav
+        class="all-currencies-nav"
+      >
+        <div>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 1024 1024"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"
+            />
+          </svg>
+        </div>
+        <div
+          class="nav-text"
+        >
+          USD - undefined 
+          
+        </div>
+        <div
+          class="search-setting-icon"
+        >
+          <select>
+            <option
+              value="ALL"
+            >
+              All RATES
+            </option>
+          </select>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M413.967 276.8c1.06-6.235 1.06-13.518 1.06-20.8s-1.06-13.518-1.06-20.8l44.667-34.318c4.26-3.118 5.319-8.317 2.13-13.518L418.215 115.6c-2.129-4.164-8.507-6.235-12.767-4.164l-53.186 20.801c-10.638-8.318-23.394-15.601-36.16-20.801l-7.448-55.117c-1.06-4.154-5.319-8.318-10.638-8.318h-85.098c-5.318 0-9.577 4.164-10.637 8.318l-8.508 55.117c-12.767 5.2-24.464 12.482-36.171 20.801l-53.186-20.801c-5.319-2.071-10.638 0-12.767 4.164L49.1 187.365c-2.119 4.153-1.061 10.399 2.129 13.518L96.97 235.2c0 7.282-1.06 13.518-1.06 20.8s1.06 13.518 1.06 20.8l-44.668 34.318c-4.26 3.118-5.318 8.317-2.13 13.518L92.721 396.4c2.13 4.164 8.508 6.235 12.767 4.164l53.187-20.801c10.637 8.318 23.394 15.601 36.16 20.801l8.508 55.117c1.069 5.2 5.318 8.318 10.637 8.318h85.098c5.319 0 9.578-4.164 10.638-8.318l8.518-55.117c12.757-5.2 24.464-12.482 36.16-20.801l53.187 20.801c5.318 2.071 10.637 0 12.767-4.164l42.549-71.765c2.129-4.153 1.06-10.399-2.13-13.518l-46.8-34.317zm-158.499 52c-41.489 0-74.46-32.235-74.46-72.8s32.971-72.8 74.46-72.8 74.461 32.235 74.461 72.8-32.972 72.8-74.461 72.8z"
+            />
+          </svg>
+        </div>
+      </nav>
+      <div
+        class="currency-search-container"
+      >
+        <input
+          max="2022-09-02"
+          min="2020-01-01"
+          type="date"
+          value=""
+        />
+      </div>
+      <div
+        class="all-currencies-header"
+      >
+        <div
+          class="currency-icon"
+        >
+          <span>
+            $
+          </span>
+        </div>
+        <div
+          class="all-currency-text"
+        >
+          <p>
+            United States Dollar
+          </p>
+          <span>
+            0
+             
+            Exchange rates
+          </span>
+        </div>
+      </div>
+      <p>
+        Currency Name/Exchange Rates -
+      </p>
+    </header>
+    <section
+      class=""
+    />
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Homepage and currencyRate should render the footer component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <footer>
+        <p>
+          Loading...
+        </p>
+      </footer>
+    </div>
+  </body>,
+  "container": <div>
+    <footer>
+      <p>
+        Loading...
+      </p>
+    </footer>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
